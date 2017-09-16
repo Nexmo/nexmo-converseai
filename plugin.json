@@ -1,0 +1,77 @@
+{
+  "name": "nexmo_converseai",
+  "displayName": "Nexmo",
+  "description": "Nexmo plugin providing access to cloud communications functionality",
+  "category": "",
+  "documentLink": "",
+  "needsOAuth": false,
+  "providerData": [
+    {
+      "param": "api_key",
+      "displayName": "Api Key",
+      "description": "API Key",
+      "type": "STRING",
+      "optional": false
+    },
+    {
+      "param": "api_secret",
+      "displayName": "Api Secret",
+      "description": "API Secret",
+      "type": "PASSWORD",
+      "optional": false
+    },
+    {
+      "param": "application_id",
+      "displayName": "Application Id",
+      "description": "Nexmo Application ID",
+      "type": "TEXT",
+      "optional": true
+    },
+    {
+      "param": "application_private_key",
+      "displayName": "Nexmo Application Private Key",
+      "description": "Nexmo Application Private Key",
+      "type": "STRING",
+      "optional": true
+    }
+  ],
+  "module": [
+    {
+      "id": "send_sms",
+      "name": "Send Sms",
+      "description": "Send an SMS",
+      "hasReturn": true,
+      "param": [
+        {
+          "param": "from",
+          "displayName": "From",
+          "description": "The phone number or alphanumeric sender ID the SMS is being sent from",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "to",
+          "displayName": "To",
+          "description": "The phone number the SMS is to be sent to",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "text",
+          "displayName": "Text",
+          "description": "The message text to be sent in the SMS",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "unicode",
+          "displayName": "Unicode",
+          "description": "A flag to indicate if the message contains special characters",
+          "type": "BOOLEAN",
+          "optional": true
+        }
+      ]
+    }
+  ],
+  "hasOAuth": false
+}

@@ -1,0 +1,20 @@
+{
+  "name": "nexmo-converseai",
+  "description": "Nexmo Plugin for Converse",
+  "main": "plugin.js",
+  "author": "leggetter@vonage.com",
+  "scripts": {
+    "test": "mocha test/plugin-test.js 'test/**/*-test.js'"
+  },
+  "dependencies": {
+    "@converseai/plugins-sdk": "latest",
+    "nexmo": "^2.0.2"
+  },
+  "devDependencies": {
+    "body-parser": "latest",
+    "chai": "latest",
+    "express": "latest",
+    "mocha": "latest",
+    "supertest": "latest"
+  }
+}
