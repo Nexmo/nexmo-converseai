@@ -4,7 +4,7 @@
   "main": "plugin.js",
   "author": "leggetter@vonage.com",
   "scripts": {
-    "test": "mocha test/plugin-test.js 'test/**/*-test.js' --timeout 35000"
+    "test": "mocha test/plugin-test.js 'test/*-test.js' 'test/module/all.js' --timeout 35000"
   },
   "dependencies": {
     "@converseai/plugins-sdk": "latest",

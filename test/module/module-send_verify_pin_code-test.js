@@ -10,10 +10,10 @@
 
 const request     = require('supertest');
 const expect      = require('chai').expect;
-const server      = require('./lib/express');
+const server      = require('../lib/express');
 
-const testConfig = require('./test-config');
-const NexmoBuilder = require('../converseai_modules/NexmoBuilder');
+const testConfig = require('../test-config');
+const NexmoBuilder = require('../../converseai_modules/NexmoBuilder');
 
 let request_id = null;
 
@@ -41,10 +41,9 @@ describe('Send Verify Pin Code', function () {
           registrationData: testConfig.registrationData
         }
       })
-      .set('X_CONVERSE_APP_TOKEN', require('../app-token'))
+      .set('X_CONVERSE_APP_TOKEN', require('../../app-token'))
       .expect(200)
       .end(function(err, res) {
-        console.log('res.body', res.body);
         expect(res.body).to.have.property('status').to.equal(0);
         expect(res.body).to.have.property('value');
 
@@ -66,6 +65,7 @@ describe('Send Verify Pin Code', function () {
             if(error) {
               console.error(error);
             }
+            console.log(result);
             done();
           });
         }, 30000);

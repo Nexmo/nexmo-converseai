@@ -9,9 +9,9 @@
 
 const request     = require('supertest');
 const expect      = require('chai').expect;
-const server      = require('./lib/express');
+const server      = require('../lib/express');
 
-const testConfig = require('./test-config');
+const testConfig = require('../test-config');
 
 describe('Send Sms', function () {
 
@@ -30,7 +30,7 @@ describe('Send Sms', function () {
           registrationData: testConfig.registrationData
         }
       })
-      .set('X_CONVERSE_APP_TOKEN', require('../app-token'))
+      .set('X_CONVERSE_APP_TOKEN', require('../../app-token'))
       .expect(200)
       .end(function(err, res) {
         expect(res.body).to.have.property('status').to.equal(0);
