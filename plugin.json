@@ -97,7 +97,7 @@
           "displayName": "Brand",
           "description": "The name of the company or App you are using Verify for. This 18 character alphanumeric string is used in the body of Verify message. For example: \"Your brand PIN is ..\".",
           "type": "STRING",
-          "optional": true
+          "optional": false
         },
         {
           "param": "sender_id",
@@ -165,7 +165,7 @@
           "param": "pin_code",
           "displayName": "Pin Code",
           "description": "The PIN given by your user to be checked",
-          "type": "NUMBER",
+          "type": "STRING",
           "optional": false
         }
       ]
