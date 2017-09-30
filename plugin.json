@@ -147,6 +147,28 @@
           "optional": true
         }
       ]
+    },
+    {
+      "id": "check_verify_pin_code",
+      "name": "Check Verify Pin Code",
+      "description": "Check a Nexmo Verification Pin Code",
+      "hasReturn": true,
+      "param": [
+        {
+          "param": "request_id",
+          "displayName": "Request ID",
+          "description": "A unique ID for an active verify request",
+          "type": "STRING",
+          "optional": false
+        },
+        {
+          "param": "pin_code",
+          "displayName": "Pin Code",
+          "description": "The PIN given by your user to be checked",
+          "type": "NUMBER",
+          "optional": false
+        }
+      ]
     }
   ],
   "hasOAuth": false
