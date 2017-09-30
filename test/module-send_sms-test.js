@@ -11,6 +11,8 @@ const request     = require('supertest');
 const expect      = require('chai').expect;
 const server      = require('./lib/express');
 
+const testConfig = require('./test-config');
+
 describe('Send Sms', function () {
 
   it('base', function(done) {
@@ -21,16 +23,11 @@ describe('Send Sms', function () {
         payload: {
           moduleId: 'send_sms',
           moduleParam: {
-            from: '447666666666',
-            to: '447777777777',
+            from: testConfig.from_number,
+            to: testConfig.to_number,
             text: 'Hello from Nexmo'
           },
-          registrationData: {
-            api_key: 'test-key',
-            api_secret: 'test-secret',
-            application_id: undefined,
-            application_private_key: undefined
-          }
+          registrationData: testConfig.registrationData
         }
       })
       .set('X_CONVERSE_APP_TOKEN', require('../app-token'))

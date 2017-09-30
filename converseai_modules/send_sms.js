@@ -12,7 +12,7 @@
 const Status          = require('@converseai/plugins-sdk').Status;
 const ModuleResponse  = require('@converseai/plugins-sdk').Payloads.ModuleResponse;
 
-const Nexmo = require('nexmo');
+const NexmoBuilder = require('./NexmoBuilder');
 
 module.exports = function send_sms (app, body) {
  /**
@@ -36,7 +36,7 @@ module.exports = function send_sms (app, body) {
   * Key  */
   var applicationPrivateKey = body.payload.registrationData.application_private_key;
 
-    /** @type {String} from The phone number or alphanumeric sender 
+  /** @type {String} from The phone number or alphanumeric sender 
   * ID the SMS is being sent from  */
   var from = body.payload.moduleParam.from;
   
@@ -55,10 +55,7 @@ module.exports = function send_sms (app, body) {
     /** @type {ModuleResponse} response The Converse AI response to respond with. */
     var response = new ModuleResponse();
 
-    const nexmo = new Nexmo({
-      apiKey: apiKey,
-      apiSecret: apiSecret
-    });
+    const nexmo = NexmoBuilder.build(body.payload.registrationData);
 
     const options = {};
     if(unicode) {
