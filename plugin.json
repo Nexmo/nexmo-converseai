@@ -38,8 +38,8 @@
   "module": [
     {
       "id": "send_sms",
-      "name": "Send Sms",
-      "description": "Send an SMS",
+      "name": "Send SMS Message",
+      "description": "Send an SMS message via Nexmo",
       "hasReturn": true,
       "param": [
         {
@@ -74,14 +74,14 @@
     },
     {
       "id": "send_verify_pin_code",
-      "name": "Send Verify Pin Code",
-      "description": "Send a Verify pin code to start the phone number verification process",
+      "name": "Send Verify PIN Code",
+      "description": "Send a Verify PIN code to start the phone number verification process",
       "hasReturn": true,
       "param": [
         {
           "param": "number",
           "displayName": "Number",
-          "description": "The phone number that the pin code is to be sent to.",
+          "description": "The phone number that the PIN code is to be sent to.",
           "type": "STRING",
           "optional": false
         },
@@ -122,7 +122,7 @@
         },
         {
           "param": "pin_expiry",
-          "displayName": "Pin Expiry",
+          "displayName": "PIN Expiry",
           "description": "The PIN validity time from generation. This is an integer value between 60 and 3600 seconds. The default is 300 seconds. When specified together, pin_expiry must be an integer multiple of nextEventWaitSeconds. Otherwise, pin_expiry is set to equal nextEventWaitSeconds.",
           "type": "NUMBER",
           "optional": true
@@ -138,8 +138,8 @@
     },
     {
       "id": "check_verify_pin_code",
-      "name": "Check Verify Pin Code",
-      "description": "Check a Nexmo Verification Pin Code",
+      "name": "Check Verify PIN Code",
+      "description": "Check a Nexmo Verification PIN Code",
       "hasReturn": true,
       "param": [
         {
@@ -151,7 +151,7 @@
         },
         {
           "param": "pin_code",
-          "displayName": "Pin Code",
+          "displayName": "PIN Code",
           "description": "The PIN given by your user to be checked",
           "type": "STRING",
           "optional": false
