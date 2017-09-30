@@ -13,10 +13,7 @@ const config = {
     api_key: NEXMO_API_KEY,
     api_secret: NEXMO_API_SECRET,
     application_id: NEXMO_APP_ID,
-    application_private_key: NEXMO_PRIVATE_KEY,
-    _nexmoTestOptions: {
-      debug: true
-    }
+    application_private_key: NEXMO_PRIVATE_KEY
   },
   to_number: NEXMO_TO_NUMBER,
   from_number: NEXMO_FROM_NUMBER
