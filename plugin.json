@@ -121,18 +121,6 @@
           "optional": true
         },
         {
-          "param": "restrict_network_type",
-          "displayName": "Restrict Network Type",
-          "description": "Restrict verification to a certain network type.",
-          "type": "ENUM",
-          "optional": true,
-          "value": [
-            "All",
-            "Mobile",
-            "Landline"
-          ]
-        },
-        {
           "param": "pin_expiry",
           "displayName": "Pin Expiry",
           "description": "The PIN validity time from generation. This is an integer value between 60 and 3600 seconds. The default is 300 seconds. When specified together, pin_expiry must be an integer multiple of nextEventWaitSeconds. Otherwise, pin_expiry is set to equal nextEventWaitSeconds.",

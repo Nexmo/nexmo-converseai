@@ -34,7 +34,6 @@ describe('Send Verify Pin Code', function () {
             sender_id: undefined,
             code_length: undefined,
             language: undefined,
-            restrict_network_type: undefined,
             pin_expiry: undefined,
             next_event_wait_seconds: undefined
           },

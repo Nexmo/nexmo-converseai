@@ -73,10 +73,6 @@ module.exports = function send_verify_pin_code (app, body) {
   * The default language is en-us.  */
   var language = body.payload.moduleParam.language;
 
-  /** @type {String} restrictNetworkType Restrict verification to 
-  * a certain network type. Possible values are:  */
-  var restrictNetworkType = body.payload.moduleParam.restrict_network_type;
-
   /** @type {Number} pinExpiry The PIN validity time from generation. 
   * This is an integer value between 60 and 3600 seconds. The default 
   * is 300 seconds. When specified together, pin_expiry must be 
@@ -103,7 +99,6 @@ module.exports = function send_verify_pin_code (app, body) {
       sender_id: senderId,
       code_length: codeLength,
       lg: language,
-      require_type: restrictNetworkType,
       pin_expiry: pinExpiry,
       next_wait_event: nextEventWaitSeconds
     };
